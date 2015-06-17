@@ -20,24 +20,13 @@ The nova-docker environment consists of two parts:
 
 Problem description
 ===================
-A compute node is able to support multiple drivers [4]. 
-Docker is an operating-system-level virtualization software and, opposite of the others
-nova drivers, abstract the Linux Kernel. Docker aims to simplify the applications provisioning
-and to avoid programmer to configure the environment.
-Adding nova-docker to openstack permits to load a specific container already configured for
-a specific application.
-
-Some proposal has presented ([2] and [3]), but no implementations was developed.
-These proposals doesn't use the plugin concept. Using a plugin it's possible
-to choose the node configured for docker in a simple way, mantaining the compute
-concept.
-
+Starting from Havana release, a Nova compute driver has been developed. Following its installation guide [1], we should configure one or more compute host for Docker. Due to a known issue [2] that prevents to load the image from glance, on each Docker host we should copy a Docker image (raw) on the host’s local filesystem. Docker will be installed only on hosts that contain in their name the string “docker”. Otherwise, it will be installed on all available hosts.
 
 Nova-docker installation
 ------------------------
 For more details about installation please refer to README present in [1]
 
-Flow:
+Installation flow:
 
 - Install docker on compute node
 - Install nova-docker driver on compute node
