@@ -10,12 +10,11 @@
 Nova-Docker: Docker driver for OpenStack Nova
 =============================================
 
-We would like to develop a plugin to configure one or more computes node as docker-hypervisor.
-Nova-docker[1] is a driver that permits nova to load and run docker container images.
+We would like to develop a new Fuel plugin in order to enable the Docker hypervisor support. We will integrate  the community driver, available at [1]. 
 
 The nova-docker environment consists of two parts:
-- a compute node configured for run docker images
-- a glance node configured for store docker images
+- one or more compute nodes should be configured to support Docker. 
+- the docker images are managed by Glance
 
 
 Problem description
