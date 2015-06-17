@@ -24,8 +24,6 @@ Starting from Havana release, a Nova compute driver has been developed. Followin
 
 Nova-docker installation
 ------------------------
-For more details about installation please refer to README present in [1]
-
 Installation flow:
 
 - Install docker on compute node
@@ -33,6 +31,7 @@ Installation flow:
 - Install docker on controller node
 - Configure glance to accept Docker container format
 
+For any further information regarding the installation process, please visit [1].
 
 Proposed change
 ===============
@@ -48,8 +47,7 @@ Our proposal considers the following aspects:
 Alternatives
 ------------
 
-None.  The solution presented in [2] and [3] are not implemented and don't 
-consider the plugin architecture
+None.  Currently, there are not other available solutions.
 
 
 Data model impact
