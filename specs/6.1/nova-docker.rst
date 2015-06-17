@@ -161,6 +161,4 @@ References
 ==========
 
 .. [1] https://github.com/stackforge/nova-docker
-.. [2] https://blueprints.launchpad.net/fuel/+spec/nova-docker-driver
-.. [3] https://blueprints.launchpad.net/fuel/+spec/enable-nova-docker-driver
-.. [4] https://wiki.openstack.org/wiki/HypervisorSupportMatrix
+.. [2] https://ask.openstack.org/en/question/55125/which-version-of-nova-docker-should-be-used-with-openstack-juno/
