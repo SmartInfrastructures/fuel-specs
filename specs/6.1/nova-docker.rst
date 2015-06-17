@@ -10,7 +10,9 @@
 Nova-Docker: Docker driver for OpenStack Nova
 =============================================
 
-We would like to develop a new Fuel plugin in order to enable the Docker hypervisor support. We will integrate  the community driver, available at [1]. 
+We would like to develop a new Fuel plugin in order to enable 
+the Docker hypervisor support.
+We will integrate  the community driver, available at [1]. 
 
 The nova-docker environment consists of two parts:
 
@@ -20,7 +22,13 @@ The nova-docker environment consists of two parts:
 
 Problem description
 ===================
-Starting from Havana release, a Nova compute driver has been developed. Following its installation guide [1], we should configure one or more compute host for Docker. Due to a known issue [2] that prevents to load the image from glance, on each Docker host we should copy a Docker image (raw) on the host’s local filesystem. Docker will be installed only on hosts that contain in their name the string “docker”. Otherwise, it will be installed on all available hosts.
+Starting from Havana release, a Nova compute driver has been developed.
+Following its installation guide [1], we should configure one or more compute
+host for Docker. Due to a known issue [2] that prevents to load the image from
+glance, on each Docker host we should copy a Docker image (raw)
+on the host’s local filesystem. 
+Docker will be installed only on hosts that contain in their name the string
+“docker”. Otherwise, it will be installed on all available hosts.
 
 Nova-docker installation
 ------------------------
@@ -31,7 +39,8 @@ Installation flow:
 - Install docker on controller node
 - Configure glance to accept Docker container format
 
-For any further information regarding the installation process, please visit [1].
+For any further information regarding the installation process,
+please visit [1].
 
 Proposed change
 ===============
@@ -39,7 +48,8 @@ Proposed change
 We would like develop a new Fuel plugin in order to install nova-docker. 
 Our proposal considers the following aspects:
 
-- Install nova-docker (docker and nova-docker driver) on all compute nodes or specified ones
+- Install nova-docker (docker and nova-docker driver) on all compute nodes
+or specified ones
 - Install docker on all controller nodes
 - Configure glance to accept docker images
 
